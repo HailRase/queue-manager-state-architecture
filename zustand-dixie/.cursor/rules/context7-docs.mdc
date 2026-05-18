@@ -1,0 +1,11 @@
+---
+description: Use Context7 MCP for library docs (Dexie, Zustand, React, Vite)
+globs: "**/*"
+alwaysApply: true
+---
+
+# Документация библиотек (Context7)
+
+- При вопросах по API **Dexie**, **Zustand**, **React**, **Vite**, **typescript-eslint** не выдумывайте сигнатуры: используйте MCP **Context7** из [`.cursor/mcp.json`](.cursor/mcp.json).
+- Перед вызовом MCP-инструмента прочитайте descriptor (schema) сервера в проекте Cursor.
+- Указывайте версии пакетов из [`package.json`](package.json), если инструмент поддерживает выбор версии.

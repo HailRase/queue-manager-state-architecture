@@ -1,0 +1,13 @@
+---
+description: Dexie + Zustand + Worker, single persist entry
+globs: "src/**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# Zustand + Dexie + Web Worker
+
+- Писать в IndexedDB с главного потока для доменных таблиц — только там, где это единственный путь (обход worker); иначе воркер — [`src/workers/wsWorker.ts`](src/workers/wsWorker.ts).
+- Zustand: [`src/store/entityStore.ts`](src/store/entityStore.ts); обновления с сервера — только через батчи `ENTITY_BATCH` и [`applyWsEntityMessages`](src/store/applyWsEntityMessage.ts).
+- Новая сущность: `ENTITY_NAMES` + `EntityRowMap` + таблица в [`src/db/schema.ts`](src/db/schema.ts) + bump `version`.
+- Мост UI — [`src/hooks/useWsBridge.ts`](src/hooks/useWsBridge.ts); типы сообщений — [`src/workers/wireTypes.ts`](src/workers/wireTypes.ts), [`src/domain/entityMessages.ts`](src/domain/entityMessages.ts).
+- Не использовать `any`; незнакомый JSON — `unknown` + `parseWsEntityMessage` или явный runtime-parse.

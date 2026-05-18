@@ -1,0 +1,13 @@
+---
+description: TypeScript strict mode, no any, unknown narrowing
+globs: "**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# TypeScript — строгая типизация
+
+- Включён `strict` и `noImplicitAny`. Запрещено объявлять `any`; для «неизвестного» используйте `unknown` и сужение (`typeof`, `instanceof`, type guards).
+- Не используйте `@ts-ignore` / `@ts-expect-error` без краткого комментария «почему»; предпочитайте исправление типов.
+- Публичные API (экспорты модулей) должны иметь явные сигнатуры; избегайте неявного `any` из контекста.
+- `void` для намеренного игнорирования Promise в обработчиках — допустим; не глотайте ошибки без `catch` в асинхронных user-facing операциях.
+- Используйте `satisfies` / discriminated unions для данных с бэка, если форма сообщений вариативна.

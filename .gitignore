@@ -1,0 +1,16 @@
+# Dependencies & build
+zustand-dixie/node_modules/
+zustand-dixie/dist/
+
+# Local / secrets
+.env
+.env.*
+*.local
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+*.log
