@@ -1,0 +1,20 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "noImplicitAny": true,
+    "noEmit": true,
+    "paths": {
+      "@stores/*": ["src/stores/*"],
+      "@bridges/*": ["src/bridges/*"],
+      "@selectors/*": ["src/selectors/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@types-local/*": ["src/types/*"],
+      "@utils/*": ["src/utils/*"],
+      "@middleware/*": ["src/middleware/*"],
+      "@bootstrap/*": ["src/bootstrap/*"]
+    }
+  },
+  "include": ["src"]
+}

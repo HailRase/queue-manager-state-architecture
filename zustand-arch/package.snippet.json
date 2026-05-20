@@ -1,0 +1,7 @@
+{
+  "_comment": "Merge these fields into the root package.json. Versions chosen to be compatible with React 19 + Vite 7 + Dexie ^3.2.4.",
+  "dependencies": {
+    "zustand": "^5.0.0",
+    "immer": "^10.0.0"
+  }
+}
