@@ -2,10 +2,11 @@
 
 Self-contained reference implementation of the target Zustand-based state layer for `queue-manager-ui`. The module is shipped in its own folder so engineers can study it end-to-end before copying chunks into `src/app/stores/` per the migration checklist. No file outside this folder is modified by this reference.
 
-The design is driven by two documents in this repository:
+The design is driven by these documents in this repository:
 
 - [`queue-architect/docs/architecture.md`](queue-architect/docs/architecture.md) — current data-flow architecture.
 - [`queue-architect/docs/zustand-migration-proposal.md`](queue-architect/docs/zustand-migration-proposal.md) — target architecture and migration plan.
+- [`queue-architect/docs/zustand-unified-architecture-proposal.ru.md`](queue-architect/docs/zustand-unified-architecture-proposal.ru.md) — unified proposal: thin worker + pipeline + entity registry + comparison with the migration proposal (RU).
 
 ## Target architecture
 
